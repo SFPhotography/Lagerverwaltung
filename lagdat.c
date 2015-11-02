@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 #include "lagdat.h"
-
+test
 static FILE *fp = NULL;
 
 int openLager(void) 
