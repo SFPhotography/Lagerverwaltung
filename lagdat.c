@@ -6,6 +6,8 @@
 #include <stdio.h>
 #include "lagdat.h"
 
+blabla bla ich teste das
+
 static FILE *fp = NULL;
 int openLager(void) 
 {
