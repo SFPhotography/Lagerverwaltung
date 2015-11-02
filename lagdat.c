@@ -5,9 +5,8 @@
 
 #include <stdio.h>
 #include "lagdat.h"
-test
-static FILE *fp = NULL;
 
+static FILE *fp = NULL;
 int openLager(void) 
 {
   int iRet = 0;
