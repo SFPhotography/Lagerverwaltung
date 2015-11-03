@@ -6,10 +6,12 @@
  */
 #include <stdio.h>
 #include "lagdat.h"
+#include "lagfunc.h"
 
 int iRet=0;
 int gesamtzahl=0;
 float gesamtwert=0;
+int ueberlauf=0; // anzahl der artikel die in array keinen platz habn
 
 int main (void)
 {

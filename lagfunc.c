@@ -5,7 +5,7 @@
  *      Author: Simon
  */
 #include <stdio.h>
-#include "lagdat.h"
+#include "lagfunc.h"
 
 int bestellMenge()
 {
