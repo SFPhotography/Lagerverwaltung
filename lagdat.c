@@ -12,21 +12,21 @@ int openLager(void)
   int iRet = 0;
   char bestands_datei_name[] = lagerdateiname;
 
-  if (fp!=NULL)
+  if (fp!=NULL) //wenn er schon am ende ist und dann null datei schließen
   	closeLager();
-  if((fp=fopen(bestands_datei_name,"rb"))==NULL)
-  {	printf(" - Dateifehler!\n");
+  if((fp=fopen(bestands_datei_name,"rb"))==NULL) //öfnnet die lager.dat und zeigt mit pointer auf ersten artikel
+  {	printf(" - Dateifehler!\n"); //rb heißt er darf binärdatei lesen
     iRet = -1;
   }
   return iRet;
 }
 
 
-int readNext(struct artikel_t * aptr) 
+int readNext(struct artikel_t *aptr)
 {
-  int iRet = -1; 
+  int iRet = -1; //wird als als dateifehler initialisiert
   if(fp!=NULL)
-  { if(fread(aptr,sizeof(struct artikel_t),1,fp) > 0)
+  { if(fread(aptr,sizeof(struct artikel_t),1,fp) > 0) // anzahl der artikel 1, länge ist größe eines artikel_t, artikel auf den fp zeigt
       iRet = 0;
     else
     { closeLager();
@@ -35,7 +35,7 @@ int readNext(struct artikel_t * aptr)
   return iRet;
 }
 
-int closeLager(void)
+int closeLager(void) //speicher wieder freigeben
 {
   int iRet = 0;
   if (fp!=NULL)
